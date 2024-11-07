@@ -10,14 +10,16 @@ const Contact = () => {
   useEffect(() => {
     axios.get(`${API_URL}/contact/get-entries`)
       .then((response) => {
-        setEntries(response.data);
+        // Sort entries in descending order based on timestamp
+        const sortedEntries = response.data.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+        setEntries(sortedEntries);
         setLoading(false);
       })
       .catch((error) => {
         console.error('Error fetching contact form entries:', error);
         setLoading(false);
       });
-  }, []);
+  }, [API_URL]);
 
   // Function to handle downloading the Excel file
   const handleDownloadExcel = () => {
