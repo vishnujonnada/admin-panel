@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/Sidebar/Sidebar';
 import Contact from './pages/Contact/Contact';
 import ExamCalendar from './pages/ExamCalendar/ExamCalendar';
+import HomepageForm from './pages/Homepage/Hompage';
 import './App.css';  // Add basic styles for layout
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Contact />} />
             <Route path="/exam-calendar" element={<ExamCalendar />} />
+            <Route path="/homepage" element={<HomepageForm />} />
+
           </Routes>
         </div>
       </div>
