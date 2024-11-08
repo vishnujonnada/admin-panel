@@ -8,7 +8,7 @@ const Sidebar = () => {
       <h2>Admin Panel</h2>
       <ul>
         <li>
-          <Link to="/">Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li>
           <Link to="/exam-calendar">Exam Calendar</Link>

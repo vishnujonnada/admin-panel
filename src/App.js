@@ -13,9 +13,9 @@ function App() {
         <Sidebar />
         <div className="content">
           <Routes>
-            <Route path="/" element={<Contact />} />
+            <Route path="/" element={<HomepageForm />} />
             <Route path="/exam-calendar" element={<ExamCalendar />} />
-            <Route path="/homepage" element={<HomepageForm />} />
+            <Route path="/contact" element={<Contact />} />
 
           </Routes>
         </div>
